@@ -52,5 +52,7 @@ button {
 .column {
     flex: 33.33%;
     padding: 5px;
-    width: auto;
+    width: 100;
+    margin-left: auto;
+    margin-right: auto;
 }
