@@ -45,6 +45,7 @@ button {
 }
 
 .row {
+    width: auto;
     display: flex;
 }
   
