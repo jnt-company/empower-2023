@@ -1,4 +1,4 @@
-var mainDiv = document.createElement("div");
+var mainDiv = document.getElementById("main");
 var BriansDiv = document.createElement("div");
 var SamsDiv = document.createElement("div");
 var NathansDiv = document.createElement("div");
@@ -28,7 +28,10 @@ function createBriansSection()
 
 function createSamsSection()
 {
-
+    var header = document.createElement("h2");
+    header.textContent = "Sam Ochs";
+    var p = document.createElement("p");
+    p.textContent = getInfo();
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     button.onclick = switchToDiv(1);
