@@ -2,10 +2,12 @@ var mainDiv;
 var BriansDiv = document.createElement("div");
 var SamsDiv = document.createElement("div");
 var NathansDiv = document.createElement("div");
+var DNCDiv = document.createElement("div");
 var response;
 createBriansSection();
 createSamsSection();
 createNathansSection();
+createDNCSection();
 var firstSwapFlag = 0;
 
 async function getInfo()
@@ -60,6 +62,21 @@ async function createNathansSection()
     NathansDiv.id = "main";
 }
 
+async function createDNCSection()
+{
+    var header = document.createElement("h2");
+    header.textContent = "Praise Him";
+    const img = document.createElement("img");
+    img.scr = "https://ca.slack-edge.com/T029831U2-U029831U4-g92354b8b257-512";
+    DNCDiv.appendChild(header);
+    DNCDiv.appendChild(img);
+    var button = document.createElement("button");
+    button.textContent = "Go back to the main window";
+    DNCDiv.addEventListener("click", switchToDiv);
+    DNCDiv.appendChild(button);
+    DNCDiv.id = "main";
+}
+
 function switchToDiv(num)
 {
     if(firstSwapFlag == 0)
@@ -75,6 +92,8 @@ function switchToDiv(num)
         mainBody.appendChild(SamsDiv);
     else if(num == 4)
         mainBody.appendChild(NathansDiv);
+    else if(num == 4)
+        mainBody.appendChild(DNCDiv);
     else
         mainBody.appendChild(mainDiv);
 }
