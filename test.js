@@ -20,7 +20,6 @@ function createBriansSection()
     button.textContent = "Go back to the main window";
     BriansDiv.addEventListener("click", switchToDiv);
     BriansDiv.appendChild(button);
-    document.getElementById("testId").appendChild(BriansDiv);
 }
 
 function createSamsSection()
@@ -33,7 +32,6 @@ function createSamsSection()
     button.textContent = "Go back to the main window";
     SamsDiv.addEventListener("click", switchToDiv);
     SamsDiv.appendChild(button);
-    document.getElementById("testId").appendChild(SamsDiv);
 }
 
 function createNathansSection()
@@ -49,7 +47,6 @@ function createNathansSection()
     NathansDiv.addEventListener("click", switchToDiv);
     NathansDiv.appendChild(button);
     NathansDiv.id = "main";
-    document.getElementById("testId").appendChild(NathansDiv);
 }
 
 function switchToDiv(num)
