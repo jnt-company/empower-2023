@@ -45,17 +45,20 @@ function createNathansSection()
     header.textContent = "Nathan Herscovici";
     var p = document.createElement("p");
     p.textContent = getInfo();
+    NathansDiv.appendChild(header);
+    NathansDiv.appendChild(p);
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     button.onclick = switchToDiv(1);
     NathansDiv.appendChild(button);
+    NathansDiv.id = "main";
     document.getElementById("testId").appendChild(NathansDiv);
 }
 
 function switchToDiv(num)
 {
     var mainBody = document.getElementById("testId");
-    mainBody.removeChild(mainBody.lastChild);
+    mainBody.removeChild(document.getElementById("main"));
     if(num == 1)
         mainBody.appendChild(mainDiv);
     else if(num == 2)
