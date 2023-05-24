@@ -19,9 +19,9 @@ async function createBriansSection()
     var header = document.createElement("h2");
     header.textContent = "Brian Vu";
     var p = document.createElement("p");
-    p.textContent = getInfo();
-    BriansDiv.appendChild(header);
-    BriansDiv.appendChild(p);
+    p.textContent = await getInfo();
+    NathansDiv.appendChild(header);
+    NathansDiv.appendChild(p);
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     BriansDiv.addEventListener("click", switchToDiv);
