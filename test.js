@@ -1,26 +1,66 @@
-var div1 = document.createElement("div");
-var text = document.createElement("p");
-var div2 = document.createElement("div");
+var mainDiv = document.createElement("div");
+var BriansDiv = document.createElement("div");
+var SamsDiv = document.createElement("div");
+var NathansDiv = document.createElement("div");
 var response
-
-getInfo();
 
 async function getInfo()
 {
     response = await fetch("https://hipsum.co/api/?type=hipster-centric&sentences=3");
     var jsonInfo = await response.json();
-    text.textContent = jsonInfo;
+    return jsonInfo;
 }
 
-function changeInformation()
+function createMainDiv()
 {
-    div1.appendChild(text);
-    document.getElementById("testId").appendChild(div1);
+
+    document.getElementById("testId").appendChild(mainDiv);
 }
 
-function changeInformation2()
+function createBriansSection()
 {
-    document.getElementById("testId").removeChild(document.getElementById("testId").lastElementChild);
-    div2.appendChild(text);
-    document.getElementById("testId").appendChild(div2);
+    var button = document.createElement("button");
+    button.textContent = "Go back to the main window";
+    button.onclick = switchToDiv(1);
+    BriansDiv.appendChild(button);
+    document.getElementById("testId").appendChild(BriansDiv);
+}
+
+function createSamsSection()
+{
+
+    var button = document.createElement("button");
+    button.textContent = "Go back to the main window";
+    button.onclick = switchToDiv(1);
+    SamsDiv.appendChild(button);
+    document.getElementById("testId").appendChild(SamsDiv);
+}
+
+function createNathansSection()
+{
+    var header = document.createElement("h2");
+    header.textContent = "Nathan Herscovici";
+    var p = document.createElement("p");
+    p.textContent = getInfo();
+    var button = document.createElement("button");
+    button.textContent = "Go back to the main window";
+    button.onclick = switchToDiv(1);
+    NathansDiv.appendChild(button);
+    document.getElementById("testId").appendChild(NathansDiv);
+}
+
+function switchToDiv(num)
+{
+    var mainBody = document.getElementById("testId");
+    mainBody.removeChild(mainBody.lastChild);
+    if(num == 1)
+        mainBody.appendChild(mainDiv);
+    else if(num == 2)
+        mainBody.appendChild(BriansDiv);
+    else if(num == 3)
+        mainBody.appendChild(SamsDiv);
+    else if(num == 4)
+        mainBody.appendChild(NathansDiv);
+    else
+        throw new console.error("I don't know how we got here");
 }
