@@ -12,7 +12,12 @@ p {
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-#EMPOWER {
+#empower {
     width: 400px;
+    height: auto;
+}
+
+#intern {
+    width: 200px;
     height: auto;
 }
