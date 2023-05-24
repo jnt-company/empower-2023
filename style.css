@@ -13,3 +13,13 @@ p {
     text-align: center;
     font-family: "Lucida Console", "Courier New", monospace;
 }
+
+#empower {
+    width: 750px;
+    height: auto;
+}
+
+#intern {
+    width: 200px;
+    height: auto;
+}
