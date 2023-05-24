@@ -5,6 +5,6 @@ function changeInformation()
     div.style.height = "100px";
     var p = document.createElement("p");
     p.textContent = "I hope this works";
-    div.innerHTML = p;
+    div.appendChild(p);
     document.getElementByTagName("body")[0].appendChild(div);
 }
