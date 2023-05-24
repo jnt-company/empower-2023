@@ -8,7 +8,6 @@ function changeInformation()
 {
     div1.appendChild(text);
     document.getElementById("testId").appendChild(div1);
-    text.textContent = "test2";
 }
 
 function changeInformation2()
