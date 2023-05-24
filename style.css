@@ -13,7 +13,6 @@ p {
     text-align: left;
     font-family: "Times New Roman", Times, serif;
     margin: 20px;
-    float: left;
 }
 
 #empower {
@@ -24,7 +23,6 @@ p {
 #intern {
     width: 25%;
     height: auto;
-    float: right;
 }
 
 button {
