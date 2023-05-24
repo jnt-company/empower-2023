@@ -1,18 +1,25 @@
 body {
-    background-color: lightblue;
+    background-color: purple;
 }
 
 h1 {
-    color: navy;
+    color: white;
     text-align: center;
+    text-shadow: 2px 2px black;
 }
 
 p {
+    color: white;
     text-align: center;
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-#EMPOWER {
-    width: 400px;
+#empower {
+    width: 750px;
+    height: auto;
+}
+
+#intern {
+    width: 200px;
     height: auto;
 }
