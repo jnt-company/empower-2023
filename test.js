@@ -6,5 +6,5 @@ function changeInformation()
     var p = document.createElement("p");
     p.textContent = "I hope this works";
     div.appendChild(p);
-    document.getElementByTagName("body")[0].appendChild(div);
+    document.getElementById("testId").appendChild(div);
 }
