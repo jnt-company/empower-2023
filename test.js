@@ -76,5 +76,5 @@ function switchToDiv(num)
     else if(num == 4)
         mainBody.appendChild(NathansDiv);
     else
-        mainBody.appendChilf(mainDiv);
+        mainBody.appendChild(mainDiv);
 }
