@@ -1,10 +1,19 @@
+var div1 = document.createElement("div");
+var text = document.createElement("p");
+var div2 = document.createElement("div");
+text.textContent = "test";
+div1.appendChild = text;
+
+
 function changeInformation()
 {
-    var div = document.createElement("div");
-    div.style.width = "100px";
-    div.style.height = "100px";
-    var p = document.createElement("p");
-    p.textContent = "I hope this works";
-    div.appendChild(p);
     document.getElementById("testId").appendChild(div);
+    text.textContent = "test2";
+}
+
+function changeInformation2()
+{
+    document.getElementById("testId").removeChild(document.getElementById("testId").lastElementChild);
+    div2.appendChild(text);
+    document.getElementById("testId").appendChild(div2);
 }
