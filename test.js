@@ -44,7 +44,7 @@ async function createNathansSection()
     NathansDiv.appendChild(p);
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
-    NathansDiv.addEventListener("click", switchToDiv);
+    NathansDiv.addEventListener("click", switchToDiv(1));
     NathansDiv.appendChild(button);
     NathansDiv.id = "main";
 }
