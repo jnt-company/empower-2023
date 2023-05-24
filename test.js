@@ -1,4 +1,4 @@
-var mainDiv;
+var mainDiv = document.getElementById("main").innerHTML;
 var BriansDiv = document.createElement("div");
 var SamsDiv = document.createElement("div");
 var NathansDiv = document.createElement("div");
@@ -6,7 +6,6 @@ var response;
 createBriansSection();
 createSamsSection();
 createNathansSection();
-var firstSwapFlag = 0;
 
 async function getInfo()
 {
@@ -36,6 +35,8 @@ async function createSamsSection()
     header.textContent = "Sam Ochs";
     var p = document.createElement("p");
     p.textContent = getInfo();
+    SamsDiv.appendChild(header);
+    SamsDiv.appendChild(p);
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     SamsDiv.addEventListener("click", switchToDiv);
@@ -48,7 +49,7 @@ async function createNathansSection()
     var header = document.createElement("h2");
     header.textContent = "Nathan Herscovici";
     var p = document.createElement("p");
-    p.textContent = await getInfo();
+    p.textContent = getInfo();
     NathansDiv.appendChild(header);
     NathansDiv.appendChild(p);
     var button = document.createElement("button");
@@ -60,19 +61,16 @@ async function createNathansSection()
 
 function switchToDiv(num)
 {
-    if(firstSwapFlag == 0)
-    {
-        mainDiv = document.getElementById("main");
-        firstSwapFlag = 1;
-    }
     var mainBody = document.getElementById("testId");
     mainBody.removeChild(document.getElementById("main"));
-    if(num == 2)
+    if(num == 1)
+        mainBody.appendChild(mainDiv);
+    else if(num == 2)
         mainBody.appendChild(BriansDiv);
     else if(num == 3)
         mainBody.appendChild(SamsDiv);
     else if(num == 4)
         mainBody.appendChild(NathansDiv);
     else
-        mainBody.appendChild(mainDiv);
+        throw new console.error("I don't know how we got here");
 }
