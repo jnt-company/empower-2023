@@ -4,5 +4,15 @@ body {
 
 h1 {
     color: navy;
-    margin-left: 20px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#EMPOWER {
+    width: 400px;
+    height: auto;
 }
