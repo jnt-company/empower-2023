@@ -14,7 +14,7 @@ async function getInfo()
     return jsonInfo;
 }
 
-function createBriansSection()
+async function createBriansSection()
 {
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
@@ -22,7 +22,7 @@ function createBriansSection()
     BriansDiv.appendChild(button);
 }
 
-function createSamsSection()
+async function createSamsSection()
 {
     var header = document.createElement("h2");
     header.textContent = "Sam Ochs";
@@ -34,12 +34,12 @@ function createSamsSection()
     SamsDiv.appendChild(button);
 }
 
-function createNathansSection()
+async function createNathansSection()
 {
     var header = document.createElement("h2");
     header.textContent = "Nathan Herscovici";
     var p = document.createElement("p");
-    p.textContent = getInfo();
+    p.textContent = await getInfo();
     NathansDiv.appendChild(header);
     NathansDiv.appendChild(p);
     var button = document.createElement("button");
@@ -53,14 +53,12 @@ function switchToDiv(num)
 {
     var mainBody = document.getElementById("testId");
     mainBody.removeChild(document.getElementById("main"));
-    if(num == 1)
-        mainBody.appendChild(mainDiv);
-    else if(num == 2)
+    if(num == 2)
         mainBody.appendChild(BriansDiv);
     else if(num == 3)
         mainBody.appendChild(SamsDiv);
     else if(num == 4)
         mainBody.appendChild(NathansDiv);
     else
-        throw new console.error("I don't know how we got here");
+        mainBody.appendChild(mainDiv);
 }
