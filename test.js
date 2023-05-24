@@ -65,11 +65,8 @@ async function createNathansSection()
 async function createDNCSection()
 {
     var header = document.createElement("h2");
-    header.textContent = "Praise Him";
-    const img = document.createElement("img");
-    img.scr = "https://www.jntcompany.com/assets/images/people/Nate.jpg";
+    header.textContent = "What did you expect?";
     DNCDiv.appendChild(header);
-    DNCDiv.appendChild(img);
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     DNCDiv.addEventListener("click", switchToDiv);
