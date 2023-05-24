@@ -2,19 +2,16 @@ var mainDiv = document.getElementById("main");
 var BriansDiv = document.createElement("div");
 var SamsDiv = document.createElement("div");
 var NathansDiv = document.createElement("div");
-var response
+var response;
+createBriansSection();
+createSamsSection();
+createNathansSection();
 
 async function getInfo()
 {
     response = await fetch("https://hipsum.co/api/?type=hipster-centric&sentences=3");
     var jsonInfo = await response.json();
     return jsonInfo;
-}
-
-function createMainDiv()
-{
-
-    document.getElementById("testId").appendChild(mainDiv);
 }
 
 function createBriansSection()
