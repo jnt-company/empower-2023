@@ -1,12 +1,17 @@
 var div1 = document.createElement("div");
 var text = document.createElement("p");
 var div2 = document.createElement("div");
-var f = fetch("https://hipsum.co/api/?type=hipster-centric&sentences=3");
-f.then(function(response) {
-    if(response.ok) {
-        text.textContent = response.json();
-    }    
-});
+var response
+
+getInfo();
+
+async function getInfo()
+{
+    response = await fetch("https://hipsum.co/api/?type=hipster-centric&sentences=3");
+    var jsonInfo = await response.json();
+    text.textContent = jsonInfo;
+}
+
 function changeInformation()
 {
     div1.appendChild(text);
