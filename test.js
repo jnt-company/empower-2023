@@ -2,11 +2,11 @@ var div1 = document.createElement("div");
 var text = document.createElement("p");
 var div2 = document.createElement("div");
 text.textContent = "test";
-div1.appendChild = text;
 
 
 function changeInformation()
 {
+    div1.appendChild = text;
     document.getElementById("testId").appendChild(div);
     text.textContent = "test2";
 }
