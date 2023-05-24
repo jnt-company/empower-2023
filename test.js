@@ -54,7 +54,7 @@ function switchToDiv(num)
 {
     if(firstSwapFlag == 0)
     {
-        var mainDiv = document.getElementById("main");
+        mainDiv = document.getElementById("main");
         firstSwapFlag = 1;
     }
     var mainBody = document.getElementById("testId");
