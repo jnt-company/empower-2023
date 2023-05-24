@@ -92,7 +92,7 @@ function switchToDiv(num)
         mainBody.appendChild(SamsDiv);
     else if(num == 4)
         mainBody.appendChild(NathansDiv);
-    else if(num == 4)
+    else if(num == 5)
         mainBody.appendChild(DNCDiv);
     else
         mainBody.appendChild(mainDiv);
