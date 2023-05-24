@@ -21,6 +21,11 @@ p {
     height: auto;
 }
 
+#chan {
+    width: 50%;
+    height: auto;
+}
+
 #intern {
     width: 25%;
     height: auto;
