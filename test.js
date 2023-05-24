@@ -69,9 +69,7 @@ function switchToDiv(num)
     }
     var mainBody = document.getElementById("testId");
     mainBody.removeChild(document.getElementById("main"));
-    if(num == 1)
-        mainBody.appendChild(mainDiv);
-    else if(num == 2)
+    if(num == 2)
         mainBody.appendChild(BriansDiv);
     else if(num == 3)
         mainBody.appendChild(SamsDiv);
