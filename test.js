@@ -1,4 +1,4 @@
-var mainDiv = document.getElementById("main");
+var mainDiv;
 var BriansDiv = document.createElement("div");
 var SamsDiv = document.createElement("div");
 var NathansDiv = document.createElement("div");
@@ -6,6 +6,7 @@ var response;
 createBriansSection();
 createSamsSection();
 createNathansSection();
+var firstSwapFlag = 0;
 
 async function getInfo()
 {
@@ -51,6 +52,11 @@ async function createNathansSection()
 
 function switchToDiv(num)
 {
+    if(firstSwapFlag == 0)
+    {
+        var mainDiv = document.getElementById("main");
+        firstSwapFlag = 1;
+    }
     var mainBody = document.getElementById("testId");
     mainBody.removeChild(document.getElementById("main"));
     if(num == 2)
