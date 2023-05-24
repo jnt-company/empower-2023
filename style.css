@@ -22,7 +22,7 @@ p {
 }
 
 #chan {
-    width: 25%;
+    width: 50%;
     height: auto;
 }
 
@@ -52,7 +52,7 @@ button {
 .column {
     flex: 33.33%;
     padding: 5px;
-    width: 100;
+    width: 100px;
     margin-left: auto;
     margin-right: auto;
 }
