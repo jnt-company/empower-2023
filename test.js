@@ -67,7 +67,7 @@ async function createDNCSection()
     var header = document.createElement("h2");
     header.textContent = "Praise Him";
     const img = document.createElement("img");
-    img.scr = "https://ca.slack-edge.com/T029831U2-U029831U4-g92354b8b257-512";
+    img.scr = "https://www.jntcompany.com/assets/images/people/Nate.jpg";
     DNCDiv.appendChild(header);
     DNCDiv.appendChild(img);
     var button = document.createElement("button");
