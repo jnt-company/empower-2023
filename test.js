@@ -1,7 +1,7 @@
 var div1 = document.createElement("div");
 var text = document.createElement("p");
 var div2 = document.createElement("div");
-text.textContent = "test";
+text.textContent = fetch("http://hipsum.co/api/?type=hipster-centric&sentences=3");
 
 
 function changeInformation()
