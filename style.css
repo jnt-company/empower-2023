@@ -111,6 +111,6 @@ button {
     background-color: blue;
   }
 
-  .column:hover .overlay {
+  .row:hover .overlay {
     opacity: 1;
   }
