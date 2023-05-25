@@ -72,8 +72,8 @@ async function createDNCSection()
     var image = document.createElement("img");
     image.src = "https://tenor.com/view/rick-ashley-dance-80s-music-gif-12136175.gif"
     DNCDiv.addEventListener("click", switchToDiv);
-    DNCDiv.appendChild(button);
     DNCDiv.appendChild(image);
+    DNCDiv.appendChild(button);
     DNCDiv.id = "main";
 }
 
