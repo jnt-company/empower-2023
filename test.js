@@ -67,6 +67,7 @@ async function createDNCSection()
     var header = document.createElement("h2");
     header.textContent = "What did you expect?";
     DNCDiv.appendChild(header);
+    playAudio('rick.MP3');
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     DNCDiv.addEventListener("click", switchToDiv);
@@ -83,6 +84,7 @@ function switchToDiv(num)
     }
     var mainBody = document.getElementById("testId");
     mainBody.removeChild(document.getElementById("main"));
+    pauseAudio('rick.MP3');
     if(num == 2)
         mainBody.appendChild(BriansDiv);
     else if(num == 3)
@@ -93,4 +95,12 @@ function switchToDiv(num)
         mainBody.appendChild(DNCDiv);
     else
         mainBody.appendChild(mainDiv);
+}
+
+function playAudio(url) {
+    new Audio(url).play();
+}
+
+function pauseAudio(url) {
+    new Audio(url).pause();
 }
