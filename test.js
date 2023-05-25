@@ -70,7 +70,7 @@ async function createDNCSection()
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     var image = document.createElement("img");
-    image.src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Frick-astley-dance-gifs&psig=AOvVaw29IE3mdx8f4h_C7k7teGtS&ust=1685124428039000&source=images&cd=vfe&ved=0CBEQjhxqFwoTCIinieuHkf8CFQAAAAAdAAAAABAE.gif"
+    image.src = "https://tenor.com/view/rick-ashley-dance-80s-music-gif-12136175.gif"
     DNCDiv.addEventListener("click", switchToDiv);
     DNCDiv.appendChild(button);
     DNCDiv.appendChild(image);
