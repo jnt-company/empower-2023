@@ -26,6 +26,7 @@ p {
     height: auto;
     margin: 0 auto;
     display: block;
+    padding: 5px;
 }
 
 #intern {
