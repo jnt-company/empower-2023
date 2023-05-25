@@ -24,6 +24,8 @@ p {
 #chan {
     width: 50%;
     height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 #intern {
