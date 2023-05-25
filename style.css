@@ -58,6 +58,7 @@ button {
     width: 100px;
     position: relative;
     border: 3px solid black;
+    text-align: center;
 }
 
 .center {
