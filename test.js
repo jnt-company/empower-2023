@@ -9,6 +9,7 @@ createSamsSection();
 createNathansSection();
 createDNCSection();
 var firstSwapFlag = 0;
+const audio = new Audio("rick.MP3");
 
 async function getInfo()
 {
@@ -69,10 +70,9 @@ async function createDNCSection()
     DNCDiv.appendChild(header);
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
-    var myMusic= document.getElementById("music");
-    myMusic.play();
     DNCDiv.addEventListener("click", switchToDiv);
     DNCDiv.appendChild(button);
+    audio.play();
     DNCDiv.id = "main";
 }
 
@@ -85,7 +85,7 @@ function switchToDiv(num)
     }
     var mainBody = document.getElementById("testId");
     mainBody.removeChild(document.getElementById("main"));
-    myMusic.pause();
+    audio.pause();
     if(num == 2)
         mainBody.appendChild(BriansDiv);
     else if(num == 3)
