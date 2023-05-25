@@ -83,7 +83,6 @@ function switchToDiv(num)
     }
     var mainBody = document.getElementById("testId");
     mainBody.removeChild(document.getElementById("main"));
-    pauseAudio('rick.MP3');
     if(num == 2)
         mainBody.appendChild(BriansDiv);
     else if(num == 3)
@@ -96,7 +95,10 @@ function switchToDiv(num)
         playAudio('rick.MP3');
     }
     else
+    {
         mainBody.appendChild(mainDiv);
+        pauseAudio('rick.MP3');
+    }
 }
 
 function playAudio(url) {
