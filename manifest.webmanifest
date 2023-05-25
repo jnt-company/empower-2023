@@ -11,6 +11,11 @@
             "src": "JNTLogo_1_512x512.png",
             "type":"image/png",
             "sizes":"512x512"
+        },
+        {
+            "src":"JNTLogo_2_192x192.png",
+            "type":"sizes",
+            "sizes":"192x192"
         }
     ]
 }
