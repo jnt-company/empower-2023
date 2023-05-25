@@ -37,6 +37,14 @@ p {
     padding: 5px;
 }
 
+#andy {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+}
+
 #intern {
     width: 25%;
     height: auto;
