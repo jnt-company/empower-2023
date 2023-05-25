@@ -93,7 +93,21 @@ function switchToDiv(num)
     else if(num == 4)
         mainBody.appendChild(NathansDiv);
     else if(num == 5)
+    {
         mainBody.appendChild(DNCDiv);
+        playAudio('rick.MP3');
+    }
     else
+    {
         mainBody.appendChild(mainDiv);
+        pauseAudio('rick.MP3');
+    }
+}
+
+function playAudio(url) {
+    new Audio(url).play();
+}
+
+function pauseAudio(url) {
+    new Audio(url).pause();
 }
