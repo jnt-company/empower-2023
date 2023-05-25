@@ -9,7 +9,6 @@ createSamsSection();
 createNathansSection();
 createDNCSection();
 var firstSwapFlag = 0;
-let vid = document.getElementById("music");
 
 async function getInfo()
 {
@@ -68,7 +67,6 @@ async function createDNCSection()
     var header = document.createElement("h2");
     header.textContent = "What did you expect?";
     DNCDiv.appendChild(header);
-    DNCDiv.appendChild(vid);
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     DNCDiv.addEventListener("click", switchToDiv);
