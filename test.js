@@ -68,7 +68,7 @@ async function createDNCSection()
     var header = document.createElement("h2");
     header.textContent = "What did you expect?";
     DNCDiv.appendChild(header);
-    vid.play();
+    DNCDiv.appendChild(vid);
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     DNCDiv.addEventListener("click", switchToDiv);
@@ -85,7 +85,6 @@ function switchToDiv(num)
     }
     var mainBody = document.getElementById("testId");
     mainBody.removeChild(document.getElementById("main"));
-    vid.pause();
     if(num == 2)
         mainBody.appendChild(BriansDiv);
     else if(num == 3)
