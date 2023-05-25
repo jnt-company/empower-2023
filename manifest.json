@@ -1,6 +1,8 @@
 {
     "name": "JNTEmpower Progressive Web App",
     "description": "Progressive web app that demonstrates that we have figured out how to install the app on a mobile device.",
+    "short_name": "JNTEmpower",
+    "start_url": "empowerdemo.xyz",
     "icons": [
         {
             "src": "JNTLogo_32x32.png",
