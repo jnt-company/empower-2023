@@ -67,7 +67,6 @@ async function createDNCSection()
     var header = document.createElement("h2");
     header.textContent = "What did you expect?";
     DNCDiv.appendChild(header);
-    playAudio('rick.MP3');
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
     DNCDiv.addEventListener("click", switchToDiv);
@@ -92,7 +91,10 @@ function switchToDiv(num)
     else if(num == 4)
         mainBody.appendChild(NathansDiv);
     else if(num == 5)
+    {
         mainBody.appendChild(DNCDiv);
+        playAudio('rick.MP3');
+    }
     else
         mainBody.appendChild(mainDiv);
 }
