@@ -69,6 +69,8 @@ async function createDNCSection()
     DNCDiv.appendChild(header);
     var button = document.createElement("button");
     button.textContent = "Go back to the main window";
+    var myMusic= document.getElementById("music");
+    myMusic.play();
     DNCDiv.addEventListener("click", switchToDiv);
     DNCDiv.appendChild(button);
     DNCDiv.id = "main";
@@ -83,6 +85,7 @@ function switchToDiv(num)
     }
     var mainBody = document.getElementById("testId");
     mainBody.removeChild(document.getElementById("main"));
+    myMusic.pause();
     if(num == 2)
         mainBody.appendChild(BriansDiv);
     else if(num == 3)
